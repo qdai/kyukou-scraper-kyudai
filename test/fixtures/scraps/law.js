@@ -14,8 +14,7 @@ module.exports = [
     department: '法学部',
     subject: 'subject3',
     teacher: 'teacher3',
-    note: 'note3',
-    hash: '18029035197ebb49bf896d700a82d8603a53e17ab58ca784b300ae24f3ecd252'
+    note: 'note3'
   },
   {
     raw: '\n        2\n        2015年10月2日（金曜・1限）\n        subject2(補講)\n        teacher2\n        2015年10月1日8時0分\n        その他\n        note2\n      ',
@@ -27,8 +26,7 @@ module.exports = [
     department: '法学部',
     subject: 'subject2',
     teacher: 'teacher2',
-    note: 'note2',
-    hash: '9381170077aba2bfca73a98f033301162a0c222ffbbe2cd6b422d4fcd819692a'
+    note: 'note2'
   },
   {
     raw: '\n        1\n        2015年10月1日（木曜・3限）\n        subject1\n        teacher1\n        2015年9月10日22時29分\n        公務\n        note1\n      ',
@@ -40,7 +38,6 @@ module.exports = [
     department: '法学部',
     subject: 'subject1',
     teacher: 'teacher1',
-    note: 'note1',
-    hash: 'b2fc57a6a91f65ccaf386ff1c40357ad978a5d78eb385a78788e4c4337b7a8b2'
+    note: 'note1'
   }
 ];

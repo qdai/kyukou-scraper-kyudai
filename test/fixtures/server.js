@@ -5,7 +5,7 @@ const http = require('http');
 const path = require('path');
 const serveStatic = require('serve-static');
 
-const serve = serveStatic(path.resolve(__dirname, './task'));
+const serve = serveStatic(path.resolve(__dirname, './sources'));
 
 module.exports = http.createServer((req, res) => {
   const done = finalhandler(req, res);

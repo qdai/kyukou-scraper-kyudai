@@ -9,8 +9,7 @@ module.exports = [
     period: '2',
     department: '理学部化学',
     subject: 'subject1',
-    teacher: 'teacher1',
-    hash: '7c9d127a88d52438ae7054f9c546137a97f396357487a57415dd20d018db7b5f'
+    teacher: 'teacher1'
   },
   {
     raw: '[[ 連絡 ]]\n                     10月 1日 (木)\n                     4時限\n                    \n                    学科:数学\n                     学年:2学年\n                    科目:subject2\n                     (担当:teacher2)\n                    連絡事項:note2\n                    教室:room2',
@@ -22,8 +21,7 @@ module.exports = [
     subject: 'subject2',
     teacher: 'teacher2',
     room: 'room2',
-    note: 'note2',
-    hash: 'e005f8ae30f4bea572c0e9fd14df0dbe31b4c73a7a7e15e0dd722f7262046fcf'
+    note: 'note2'
   },
   new Error('Invalid eventDate on [[ 休講 ]]                     10月 6日 (水)                     4時限                                        学科:数学                     学年:4学年                    科目:subject3                     (担当:subject3)')
 ];

@@ -14,8 +14,7 @@ module.exports = [
     department: '教育学部',
     subject: 'subject3',
     teacher: 'teacher3',
-    room: 'room3',
-    hash: '1bbe968a54e7bab2704381c0bca3ff15ee7fa248bd3240177175534f41b87755'
+    room: 'room3'
   },
   {
     raw: '【休講】6月2日(火)1限 campus2地区開講「subject2」(teacher2教員)',
@@ -27,7 +26,6 @@ module.exports = [
     department: '教育学部',
     subject: 'subject2',
     teacher: 'teacher2',
-    campus: 'campus2地区',
-    hash: '10f8551038c343c38a4fe6d65bb438a48995fbfdbd0c7f983010e0b9e371b6d0'
+    campus: 'campus2地区'
   }
 ];
