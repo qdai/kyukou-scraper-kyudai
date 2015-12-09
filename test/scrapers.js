@@ -4,33 +4,40 @@
 
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
-const rewire = require('rewire');
-const url = require('url');
+const nock = require('nock');
+const path = require('path');
 
 chai.use(chaiAsPromised);
 
 const expect = chai.expect;
 
-const config = require('./fixtures/config');
-const server = require('./fixtures/server');
-
 const departments = ['economics', 'education', 'law', 'literature', 'science'];
 
 describe('Scrapers', () => {
-  before(done => server.listen(url.parse(config.localhost).port, done));
+  before(() => {
+    nock('http://www.econ.kyushu-u.ac.jp')
+      .get('/student/kyuukou.php')
+      .replyWithFile(200, path.join(__dirname, './fixtures/sources/economics.html'));
+    nock('http://www.education.kyushu-u.ac.jp')
+      .get('/topics/student_index')
+      .replyWithFile(200, path.join(__dirname, './fixtures/sources/education.html'));
+    nock('http://www.law.kyushu-u.ac.jp')
+      .get('/kyukou/keiji.cgi')
+      .replyWithFile(200, path.join(__dirname, './fixtures/sources/law.html'));
+    nock('http://www2.lit.kyushu-u.ac.jp')
+      .get('/~syllabus/cgi-bin/class-schedule.cgi')
+      .replyWithFile(200, path.join(__dirname, './fixtures/sources/literature.html'));
+    nock('http://www.sci.kyushu-u.ac.jp')
+      .get('/home/cancel/cancel.php')
+      .replyWithFile(200, path.join(__dirname, './fixtures/sources/science.html'));
+  });
 
-  after(done => server.close(done));
+  after(() => nock.cleanAll());
 
   departments.forEach(department => {
     describe('/' + department, () => {
       it('expected to build events about ' + department, () => {
-        const getDepartment = rewire('../lib/scrapers/' + department);
-        getDepartment.__set__({ // eslint-disable-line no-underscore-dangle
-          'config.baseURL': config.localhost,
-          'config.resourcePath': '/' + department + '.html',
-          'config.resourceURL': config.localhost + '/' + department + '.html'
-        });
-        const promise = getDepartment();
+        const promise = require('../lib/scrapers/' + department)();
         const expected = require('./fixtures/scraps/' + department);
         return expect(promise).to.become(expected);
       });

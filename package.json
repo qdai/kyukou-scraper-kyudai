@@ -17,14 +17,12 @@
     "chai-as-promised": "^5.1.0",
     "del": "^2.1.0",
     "eslint-config-eslint": "^1.0.1",
-    "finalhandler": "^0.4.0",
     "gulp": "^3.9.0",
     "gulp-coveralls": "^0.1.4",
     "gulp-eslint": "^1.1.1",
     "gulp-istanbul": "^0.10.3",
     "gulp-mocha": "^2.2.0",
-    "rewire": "^2.5.1",
-    "serve-static": "^1.10.0"
+    "nock": "^3.4.0"
   },
   "engines": {
     "node": "~5.1.1"
