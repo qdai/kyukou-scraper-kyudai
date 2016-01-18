@@ -19,7 +19,7 @@
     "eslint-config-eslint": "^1.0.1",
     "istanbul": "^0.4.1",
     "mocha": "^2.3.4",
-    "nock": "^3.4.0",
+    "nock": "^5.2.1",
     "rimraf": "^2.4.4"
   },
   "engines": {
