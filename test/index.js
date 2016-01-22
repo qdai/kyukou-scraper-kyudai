@@ -10,7 +10,7 @@ const scrapers = require('../lib');
 
 describe('Scraper', () => {
   departments.map(department => {
-    it('expected to support ' + department, () => {
+    it(`expected to support ${department}`, () => {
       expect(scrapers[department]).to.be.a('function');
     });
   });

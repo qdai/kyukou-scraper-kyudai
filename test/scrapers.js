@@ -33,10 +33,10 @@ describe('Scrapers', () => {
   after(() => nock.cleanAll());
 
   departments.forEach(department => {
-    describe('/' + department, () => {
-      it('expected to build events about ' + department, () => {
-        const promise = require('../lib/scrapers/' + department)();
-        const expected = require('./fixtures/scraps/' + department);
+    describe(`/${department}`, () => {
+      it(`expected to build events about ${department}`, () => {
+        const promise = require(`../lib/scrapers/${department}`)();
+        const expected = require(`./fixtures/scraps/${department}`);
         return expect(promise).to.become(expected);
       });
     });

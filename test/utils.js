@@ -16,9 +16,7 @@ const normalizeText = require('../lib/utils/normalizetext');
 describe('Utils', () => {
   describe('/fetch', () => {
     it('expected to return parsed web page', () => {
-      const promise = fetch('https://travis-ci.org/qdai/kyukou-scraper-kyudai').then($ => {
-        return $().cheerio;
-      });
+      const promise = fetch('https://travis-ci.org/qdai/kyukou-scraper-kyudai').then($ => $().cheerio);
       return expect(promise).to.become('[cheerio object]');
     });
   });
