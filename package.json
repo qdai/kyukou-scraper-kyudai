@@ -19,7 +19,7 @@
     "eslint-config-egy186": "github:egy186/eslint-config-egy186",
     "istanbul": "^0.4.1",
     "mocha": "^2.3.4",
-    "nock": "^6.0.1",
+    "nock": "^7.0.2",
     "rimraf": "^2.4.4"
   },
   "engines": {
