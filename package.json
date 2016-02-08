@@ -25,6 +25,9 @@
   "engines": {
     "node": "^5.5.0"
   },
+  "files": [
+    "lib"
+  ],
   "homepage": "https://kyukou-kyudai.herokuapp.com",
   "keywords": [
     "kyudai",
