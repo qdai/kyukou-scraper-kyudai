@@ -16,15 +16,18 @@
     "chai": "^3.4.1",
     "chai-as-promised": "^5.1.0",
     "eslint": "^1.10.3",
-    "eslint-config-egy186": "github:egy186/eslint-config-egy186",
+    "eslint-config-egy186": "github:egy186/eslint-config-egy186#v0.1.1",
     "istanbul": "^0.4.1",
     "mocha": "^2.3.4",
     "nock": "^7.0.2",
     "rimraf": "^2.4.4"
   },
   "engines": {
-    "node": "~5.1.1"
+    "node": "^5.5.0"
   },
+  "files": [
+    "lib"
+  ],
   "homepage": "https://kyukou-kyudai.herokuapp.com",
   "keywords": [
     "kyudai",
