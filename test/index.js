@@ -9,7 +9,7 @@ const departments = ['economics', 'education', 'law', 'literature', 'science'];
 const scrapers = require('../lib');
 
 describe('Scraper', () => {
-  departments.map(department => {
+  departments.forEach(department => {
     it(`expected to support ${department}`, () => {
       expect(scrapers[department]).to.be.a('function');
     });
