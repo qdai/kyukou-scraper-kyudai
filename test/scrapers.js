@@ -4,12 +4,14 @@ const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 const nock = require('nock');
 const path = require('path');
+const requireDir = require('require-dir');
 
 chai.use(chaiAsPromised);
 
 const expect = chai.expect;
 
-const departments = ['economics', 'education', 'law', 'literature', 'science'];
+const scrapers = requireDir('../lib/scrapers');
+const expected = requireDir('./fixtures/scraps');
 
 describe('Scrapers', () => {
   before(() => {
@@ -32,13 +34,14 @@ describe('Scrapers', () => {
 
   after(() => nock.cleanAll());
 
-  departments.forEach(department => {
-    describe(`/${department}`, () => {
-      it(`expected to build events about ${department}`, () => {
-        const promise = require(`../lib/scrapers/${department}`)(); // eslint-disable-line global-require
-        const expected = require(`./fixtures/scraps/${department}`); // eslint-disable-line global-require
-        return expect(promise).to.become(expected);
+  for (const department in scrapers) {
+    if (scrapers.hasOwnProperty(department)) {
+      describe(`/${department}`, () => {
+        it(`expected to build events about ${department}`, () => {
+          const promise = scrapers[department]();
+          return expect(promise).to.become(expected[department]);
+        });
       });
-    });
-  });
+    }
+  }
 });
