@@ -35,8 +35,8 @@ describe('Scrapers', () => {
   departments.forEach(department => {
     describe(`/${department}`, () => {
       it(`expected to build events about ${department}`, () => {
-        const promise = require(`../lib/scrapers/${department}`)();
-        const expected = require(`./fixtures/scraps/${department}`);
+        const promise = require(`../lib/scrapers/${department}`)(); // eslint-disable-line global-require
+        const expected = require(`./fixtures/scraps/${department}`); // eslint-disable-line global-require
         return expect(promise).to.become(expected);
       });
     });
