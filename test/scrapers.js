@@ -34,14 +34,12 @@ describe('Scrapers', () => {
 
   after(() => nock.cleanAll());
 
-  for (const department in scrapers) {
-    if (scrapers.hasOwnProperty(department)) {
-      describe(`/${department}`, () => {
-        it(`expected to build events about ${department}`, () => {
-          const promise = scrapers[department]();
-          return expect(promise).to.become(expected[department]);
-        });
+  Object.keys(scrapers).forEach(department => {
+    describe(`/${department}`, () => {
+      it(`expected to build events about ${department}`, () => {
+        const promise = scrapers[department]();
+        return expect(promise).to.become(expected[department]);
       });
-    }
-  }
+    });
+  });
 });
