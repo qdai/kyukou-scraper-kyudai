@@ -10,8 +10,8 @@ moment.locale('ja');
 const expect = chai.expect;
 
 const fetch = require('../lib/utils/fetch');
-const isValidDate = require('../lib/utils/isvaliddate');
-const normalizeText = require('../lib/utils/normalizetext');
+const isValidDate = require('../lib/utils/is-valid-date');
+const normalizeText = require('../lib/utils/normalize-text');
 const parseDate = require('../lib/utils/parse-date');
 
 describe('Utils', () => {
