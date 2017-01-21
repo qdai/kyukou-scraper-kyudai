@@ -1,5 +1,7 @@
 # Kyukou Scraper for Kyukou-kyudai
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/qdai/kyukou-scraper-kyudai.svg)](https://greenkeeper.io/)
+
 [![GitHub release](https://img.shields.io/github/release/qdai/kyukou-scraper-kyudai.svg)](https://github.com/qdai/kyukou-scraper-kyudai/releases/latest)
 
 [![Build Status](https://travis-ci.org/qdai/kyukou-scraper-kyudai.svg)](https://travis-ci.org/qdai/kyukou-scraper-kyudai)
