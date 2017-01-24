@@ -1,8 +1,10 @@
 'use strict';
 
+const ScrapError = require('../../../lib/utils/scrap-error');
+
 module.exports = [
-  new Error('Invalid eventDate'),
-  new TypeError('Cannot read property \'1\' of null on           2015年10月1日（木）          休講          後期・通常              木曜invalid period              subject1          teacher1          note1          2015年9月8日(1時24分)        '),
+  new ScrapError('Invalid eventDate on yyyy年mm月dd日（木） 休講 後期・通常 木曜2限 subject1 teacher1 note1 2015年9月8日(1時24分)'),
+  new ScrapError('Cannot read property \'1\' of null on 2015年10月1日（木） 休講 後期・通常 木曜invalid period subject1 teacher1 note1 2015年9月8日(1時24分)'),
   {
     about: '休講',
     department: '文学部',

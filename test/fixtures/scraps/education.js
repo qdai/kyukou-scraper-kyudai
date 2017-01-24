@@ -1,7 +1,9 @@
 'use strict';
 
+const ScrapError = require('../../../lib/utils/scrap-error');
+
 module.exports = [
-  new Error('Invalid eventDate on 【補講】7月10日(木)4限 「subject4」(teacher4教員)'),
+  new ScrapError('Invalid eventDate on 【補講】7月10日(木)4限 「subject4」(teacher4教員)'),
   {
     about: '補講',
     department: '教育学部',

@@ -1,5 +1,7 @@
 'use strict';
 
+const ScrapError = require('../../../lib/utils/scrap-error');
+
 module.exports = [
   {
     about: '休講',
@@ -35,5 +37,5 @@ module.exports = [
     subject: 'subject2',
     teacher: 'teacher2'
   },
-  new Error('Invalid eventDate on [[ 休講 ]]  10月 6日 (水)  4時限学科:数学  学年:4学年                      科目:subject3  (担当:subject3)')
+  new ScrapError('Invalid eventDate on [[ 休講 ]]  10月 6日 (水)  4時限学科:数学  学年:4学年                      科目:subject3  (担当:subject3)')
 ];

@@ -1,7 +1,9 @@
 'use strict';
 
+const ScrapError = require('../../../lib/utils/scrap-error');
+
 module.exports = [
-  new TypeError('Cannot read property \'1\' of null on         4        invalid date（木曜・1限）        subject4        teacher4        2015年10月16日18時52分        公務        note4      '),
+  new ScrapError('Cannot read property \'1\' of null on         4        invalid date（木曜・1限）        subject4        teacher4        2015年10月16日18時52分        公務        note4      '),
   {
     about: '休講',
     department: '法学部',

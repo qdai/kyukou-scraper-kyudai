@@ -9,12 +9,22 @@ moment.locale('ja');
 
 const expect = chai.expect;
 
+const ScrapError = require('../lib/utils/scrap-error');
 const fetch = require('../lib/utils/fetch');
 const isValidDate = require('../lib/utils/is-valid-date');
 const normalizeText = require('../lib/utils/normalize-text');
 const parseDate = require('../lib/utils/parse-date');
 
 describe('Utils', () => {
+  describe('./ScrapError', () => {
+    it('is expected to create ScrapError', () => {
+      const message = 'scrap error';
+      const err = new ScrapError(message);
+      expect(err.name).to.deep.equal('ScrapError');
+      expect(err.message).to.deep.equal(message);
+    });
+  });
+
   describe('/fetch', () => {
     it('expected to return parsed web page', () => {
       const promise = fetch('https://travis-ci.org/qdai/kyukou-scraper-kyudai').then($ => $().cheerio);
