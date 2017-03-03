@@ -43,3 +43,34 @@ describe('Scrapers', () => {
     });
   });
 });
+
+describe('Scrapers: no network connection', () => {
+  before(() => {
+    nock('http://www.econ.kyushu-u.ac.jp')
+      .get('/student/kyuukou.php')
+      .replyWithError('network error');
+    nock('http://www.education.kyushu-u.ac.jp')
+      .get('/topics/student_index')
+      .replyWithError('network error');
+    nock('http://www.law.kyushu-u.ac.jp')
+      .get('/kyukou/keiji.cgi')
+      .replyWithError('network error');
+    nock('http://www2.lit.kyushu-u.ac.jp')
+      .get('/~syllabus/cgi-bin/class-schedule.cgi')
+      .replyWithError('network error');
+    nock('http://www.sci.kyushu-u.ac.jp')
+      .get('/home/cancel/cancel.php')
+      .replyWithError('network error');
+  });
+
+  after(() => nock.cleanAll());
+
+  Object.keys(scrapers).forEach(department => {
+    describe(`/${department}`, () => {
+      it(`expected to be fulfilled (${department})`, () => {
+        const promise = scrapers[department]();
+        return expect(promise).to.be.fulfilled;
+      });
+    });
+  });
+});
