@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@egy186/eslint-config": "~0.24.0",
-    "chai": "^3.4.1",
+    "chai": "^4.0.1",
     "chai-as-promised": "^6.0.0",
     "eslint": "~3.19.0",
     "istanbul": "^0.4.1",
