@@ -4,7 +4,13 @@ const chai = require('chai');
 
 const expect = chai.expect;
 
-const departments = ['economics', 'education', 'law', 'literature', 'science'];
+const departments = [
+  'economics',
+  'education',
+  'law',
+  'literature',
+  'science'
+];
 
 const scrapers = require('../lib');
 
