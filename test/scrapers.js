@@ -2,10 +2,12 @@
 
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
+const chaiShallowDeepEqual = require('chai-shallow-deep-equal');
 const nock = require('nock');
 const path = require('path');
 const requireDir = require('require-dir');
 
+chai.use(chaiShallowDeepEqual);
 chai.use(chaiAsPromised);
 
 const expect = chai.expect;
@@ -38,7 +40,7 @@ describe('Scrapers', () => {
     describe(`/${department}`, () => {
       it(`expected to build events about ${department}`, () => {
         const promise = scrapers[department]();
-        return expect(promise).to.become(expected[department]);
+        return expect(promise).to.eventually.shallowDeepEqual(expected[department]);
       });
     });
   });

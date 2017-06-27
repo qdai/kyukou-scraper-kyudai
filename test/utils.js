@@ -64,8 +64,8 @@ describe('Utils', () => {
 
   describe('/parseDate', () => {
     it('expected to parse date', () => {
-      expect(parseDate('2016年6月9日', 'YYYY年M月D日')).to.deep.equal(new Date('2016-06-08T15:00:00'));
-      expect(parseDate('2016年6月9日', 'YYYY年M月D日', '木')).to.deep.equal(new Date('2016-06-08T15:00:00'));
+      expect(parseDate('2016年6月9日', 'YYYY年M月D日')).to.deep.equal(new Date('2016-06-08T15:00:00Z'));
+      expect(parseDate('2016年6月9日', 'YYYY年M月D日', '木')).to.deep.equal(new Date('2016-06-08T15:00:00Z'));
     });
 
     it('expected to throw', () => {
