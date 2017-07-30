@@ -7,7 +7,7 @@ const moment = require('moment');
 chai.use(chaiAsPromised);
 moment.locale('ja');
 
-const expect = chai.expect;
+const { expect } = chai;
 
 const ScrapError = require('../lib/utils/scrap-error');
 const fetch = require('../lib/utils/fetch');

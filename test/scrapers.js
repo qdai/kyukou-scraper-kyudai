@@ -10,7 +10,7 @@ const requireDir = require('require-dir');
 chai.use(chaiShallowDeepEqual);
 chai.use(chaiAsPromised);
 
-const expect = chai.expect;
+const { expect } = chai;
 
 const scrapers = requireDir('../lib/scrapers');
 const expected = requireDir('./fixtures/scraps');
