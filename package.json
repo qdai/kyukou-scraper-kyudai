@@ -13,7 +13,7 @@
     "require-dir": "^0.3.0"
   },
   "devDependencies": {
-    "@egy186/eslint-config": "~0.27.0",
+    "@egy186/eslint-config": "~0.28.0",
     "chai": "^4.0.2",
     "chai-as-promised": "^7.0.0",
     "chai-shallow-deep-equal": "^1.4.6",
