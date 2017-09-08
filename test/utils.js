@@ -12,6 +12,7 @@ const { expect } = chai;
 const ScrapError = require('../lib/utils/scrap-error');
 const fetch = require('../lib/utils/fetch');
 const isValidDate = require('../lib/utils/is-valid-date');
+const nock = require('nock');
 const normalizeText = require('../lib/utils/normalize-text');
 const parseDate = require('../lib/utils/parse-date');
 
@@ -26,9 +27,21 @@ describe('Utils', () => {
   });
 
   describe('/fetch', () => {
+    before(() => {
+      nock('http://example.com')
+        .get('/ok')
+        .reply(200, 'ok')
+        .get('/not-found')
+        .reply(404, 'not-found');
+    });
+
     it('expected to return parsed web page', () => {
-      const promise = fetch('https://travis-ci.org/qdai/kyukou-scraper-kyudai').then($ => $().cheerio);
+      const promise = fetch('http://example.com/ok').then($ => $().cheerio);
       return expect(promise).to.become('[cheerio object]');
+    });
+    it('expected to be rejected', () => {
+      const promise = fetch('http://example.com/not-found');
+      return expect(promise).to.be.rejectedWith(Error, /404/);
     });
   });
 
