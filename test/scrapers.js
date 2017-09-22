@@ -24,7 +24,7 @@ describe('Scrapers', () => {
       .get('/topics/student_index')
       .replyWithFile(200, path.join(__dirname, './fixtures/sources/education.html'));
     nock('http://www.law.kyushu-u.ac.jp')
-      .get('/kyukou/keiji.cgi')
+      .get('/faculty/cancel.php')
       .replyWithFile(200, path.join(__dirname, './fixtures/sources/law.html'));
     nock('http://www2.lit.kyushu-u.ac.jp')
       .get('/~syllabus/cgi-bin/class-schedule.cgi')
