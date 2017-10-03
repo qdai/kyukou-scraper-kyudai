@@ -19,7 +19,7 @@
     "chai-shallow-deep-equal": "^1.4.6",
     "eslint": "~4.8.0",
     "istanbul": "^0.4.1",
-    "mocha": "^3.0.2",
+    "mocha": "^4.0.0",
     "nock": "^9.0.0",
     "rimraf": "^2.4.4"
   },
