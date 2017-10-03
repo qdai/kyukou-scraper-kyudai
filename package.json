@@ -18,9 +18,9 @@
     "chai-as-promised": "^7.0.0",
     "chai-shallow-deep-equal": "^1.4.6",
     "eslint": "~4.8.0",
-    "istanbul": "^0.4.1",
     "mocha": "^4.0.0",
     "nock": "^9.0.0",
+    "nyc": "^11.2.1",
     "rimraf": "^2.4.4"
   },
   "engines": {
@@ -44,6 +44,6 @@
   "scripts": {
     "clean": "rimraf coverage",
     "lint": "eslint lib test",
-    "test": "istanbul cover --root lib --report lcov --dir coverage node_modules/mocha/bin/_mocha -- test/*.js"
+    "test": "nyc --reporter lcov --reporter text-summary --report-dir coverage mocha test/*.js"
   }
 }
