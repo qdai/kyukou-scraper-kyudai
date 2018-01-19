@@ -35,9 +35,9 @@ describe('Utils', () => {
         .reply(404, 'not-found');
     });
 
-    it('expected to return parsed web page', () => {
-      const promise = fetch('http://example.com/ok').then($ => $().cheerio);
-      return expect(promise).to.become('[cheerio object]');
+    it('expected to return parsed web page', async () => {
+      const $ = await fetch('http://example.com/ok');
+      expect($().cheerio).to.deep.equal('[cheerio object]');
     });
     it('expected to be rejected', () => {
       const promise = fetch('http://example.com/not-found');

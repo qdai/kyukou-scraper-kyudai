@@ -1,14 +1,12 @@
 'use strict';
 
 const chai = require('chai');
-const chaiAsPromised = require('chai-as-promised');
 const chaiShallowDeepEqual = require('chai-shallow-deep-equal');
 const nock = require('nock');
 const path = require('path');
 const requireDir = require('require-dir');
 
 chai.use(chaiShallowDeepEqual);
-chai.use(chaiAsPromised);
 
 const { expect } = chai;
 
@@ -38,9 +36,9 @@ describe('Scrapers', () => {
 
   Object.keys(scrapers).forEach(department => {
     describe(`/${department}`, () => {
-      it(`expected to build events about ${department}`, () => {
-        const promise = scrapers[department]();
-        return expect(promise).to.eventually.shallowDeepEqual(expected[department]);
+      it(`expected to build events about ${department}`, async () => {
+        const events = await scrapers[department]();
+        expect(events).to.shallowDeepEqual(expected[department]);
       });
     });
   });
@@ -69,9 +67,9 @@ describe('Scrapers: no network connection', () => {
 
   Object.keys(scrapers).forEach(department => {
     describe(`/${department}`, () => {
-      it(`expected to be fulfilled (${department})`, () => {
-        const promise = scrapers[department]();
-        return expect(promise).to.be.fulfilled;
+      it(`expected to become a fetch error (${department})`, async () => {
+        const [err] = await scrapers[department]();
+        expect(err.name).to.deep.equal('FetchError');
       });
     });
   });
