@@ -15,9 +15,6 @@ const expected = requireDir('./fixtures/scraps');
 
 describe('Scrapers', () => {
   before(() => {
-    nock('http://www.econ.kyushu-u.ac.jp')
-      .get('/student/kyuukou.php')
-      .replyWithFile(200, path.join(__dirname, './fixtures/sources/economics.html'));
     nock('http://www.education.kyushu-u.ac.jp')
       .get('/topics/student_index')
       .replyWithFile(200, path.join(__dirname, './fixtures/sources/education.html'));
@@ -46,9 +43,6 @@ describe('Scrapers', () => {
 
 describe('Scrapers: no network connection', () => {
   before(() => {
-    nock('http://www.econ.kyushu-u.ac.jp')
-      .get('/student/kyuukou.php')
-      .replyWithError('network error');
     nock('http://www.education.kyushu-u.ac.jp')
       .get('/topics/student_index')
       .replyWithError('network error');

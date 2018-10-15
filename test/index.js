@@ -5,7 +5,6 @@ const chai = require('chai');
 const { expect } = chai;
 
 const departments = [
-  'economics',
   'education',
   'law',
   'literature',
