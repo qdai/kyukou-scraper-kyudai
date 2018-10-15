@@ -28,7 +28,7 @@ describe('Scrapers', () => {
       .get('/~syllabus/cgi-bin/class-schedule.cgi')
       .replyWithFile(200, path.join(__dirname, './fixtures/sources/literature.html'));
     nock('https://www.sci.kyushu-u.ac.jp')
-      .get('/student/cancel/cancel.php')
+      .get('/student/cancel/')
       .replyWithFile(200, path.join(__dirname, './fixtures/sources/science.html'));
   });
 
