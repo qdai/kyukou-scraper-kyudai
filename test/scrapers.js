@@ -22,7 +22,7 @@ describe('Scrapers', () => {
       .get('/faculty/cancel.php')
       .replyWithFile(200, path.join(__dirname, './fixtures/sources/law.html'));
     nock('http://www2.lit.kyushu-u.ac.jp')
-      .get('/~syllabus/cgi-bin/class-schedule.cgi')
+      .get('/~syllabus/cgi-bin/class-schedule-1.cgi')
       .replyWithFile(200, path.join(__dirname, './fixtures/sources/literature.html'));
     nock('https://www.sci.kyushu-u.ac.jp')
       .get('/student/cancel/')
