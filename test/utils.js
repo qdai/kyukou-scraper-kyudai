@@ -41,7 +41,7 @@ describe('Utils', () => {
     });
     it('expected to be rejected', () => {
       const promise = fetch('http://example.com/not-found');
-      return expect(promise).to.be.rejectedWith(Error, /404/);
+      return expect(promise).to.be.rejectedWith(Error, /404/u);
     });
   });
 
