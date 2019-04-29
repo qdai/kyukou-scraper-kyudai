@@ -10,7 +10,7 @@
     "cheerio": "^0.22.0",
     "encoding": "^0.1.12",
     "moment": "^2.23.0",
-    "node-fetch": "^2.3.0",
+    "node-fetch": "^2.4.1",
     "require-dir": "^1.2.0"
   },
   "devDependencies": {
