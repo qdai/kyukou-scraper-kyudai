@@ -5,6 +5,7 @@ const chaiShallowDeepEqual = require('chai-shallow-deep-equal');
 const nock = require('nock');
 const path = require('path');
 const requireDir = require('require-dir');
+const sinon = require('sinon');
 
 chai.use(chaiShallowDeepEqual);
 
@@ -14,7 +15,9 @@ const scrapers = requireDir('../lib/scrapers');
 const expected = requireDir('./fixtures/scraps');
 
 describe('Scrapers', () => {
+  let clock = null;
   before(() => {
+    clock = sinon.useFakeTimers(new Date(2019, 3, 1, 12));
     nock('http://www.education.kyushu-u.ac.jp')
       .get('/topics/student_index')
       .replyWithFile(200, path.join(__dirname, './fixtures/sources/education.html'));
@@ -29,7 +32,10 @@ describe('Scrapers', () => {
       .replyWithFile(200, path.join(__dirname, './fixtures/sources/science.html'));
   });
 
-  after(() => nock.cleanAll());
+  after(() => {
+    clock.restore();
+    nock.cleanAll();
+  });
 
   Object.keys(scrapers).forEach(department => {
     describe(`/${department}`, () => {
