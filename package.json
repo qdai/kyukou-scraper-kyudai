@@ -19,7 +19,7 @@
     "chai-as-promised": "^7.0.0",
     "chai-shallow-deep-equal": "^1.4.6",
     "eslint": "~7.3.0",
-    "eslint-plugin-jsdoc": "^27.1.2",
+    "eslint-plugin-jsdoc": "^28.5.1",
     "eslint-plugin-node": "^11.1.0",
     "mocha": "^8.0.1",
     "nock": "^12.0.3",
