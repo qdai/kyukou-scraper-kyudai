@@ -9,7 +9,7 @@
   "dependencies": {
     "cheerio": "^0.22.0",
     "encoding": "^0.1.13",
-    "moment": "~2.28.0",
+    "moment": "~2.29.0",
     "node-fetch": "^2.6.1",
     "require-dir": "^1.2.0"
   },
