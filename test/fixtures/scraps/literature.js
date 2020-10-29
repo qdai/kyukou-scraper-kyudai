@@ -9,7 +9,7 @@ module.exports = [
     about: '休講',
     department: '文学部',
     eventDate: new Date('2015-10-01T00:00+09:00'),
-    link: 'http://www2.lit.kyushu-u.ac.jp/~syllabus/cgi-bin/class-schedule-1.cgi',
+    link: 'https://www2.lit.kyushu-u.ac.jp/~syllabus/cgi-bin/class-schedule-1.cgi',
     note: 'note1',
     period: '2',
     pubDate: new Date('2015-09-08T01:24+09:00'),

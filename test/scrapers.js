@@ -24,7 +24,7 @@ describe('Scrapers', () => {
     nock('http://www.law.kyushu-u.ac.jp')
       .get('/faculty/cancel.php')
       .replyWithFile(200, path.join(__dirname, './fixtures/sources/law.html'));
-    nock('http://www2.lit.kyushu-u.ac.jp')
+    nock('https://www2.lit.kyushu-u.ac.jp')
       .get('/~syllabus/cgi-bin/class-schedule-1.cgi')
       .replyWithFile(200, path.join(__dirname, './fixtures/sources/literature.html'));
     nock('https://www.sci.kyushu-u.ac.jp')
@@ -55,7 +55,7 @@ describe('Scrapers: no network connection', () => {
     nock('http://www.law.kyushu-u.ac.jp')
       .get('/kyukou/keiji.cgi')
       .replyWithError('network error');
-    nock('http://www2.lit.kyushu-u.ac.jp')
+    nock('https://www2.lit.kyushu-u.ac.jp')
       .get('/~syllabus/cgi-bin/class-schedule.cgi')
       .replyWithError('network error');
     nock('https://www.sci.kyushu-u.ac.jp')
