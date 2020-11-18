@@ -18,8 +18,8 @@ describe('Scrapers', () => {
   let clock = null;
   before(() => {
     clock = sinon.useFakeTimers(new Date(2019, 3, 1, 12));
-    nock('http://www.education.kyushu-u.ac.jp')
-      .get('/topics/student_index')
+    nock('https://www.education.kyushu-u.ac.jp')
+      .get('/category/%e3%81%bf%e3%81%aa%e3%81%95%e3%82%93%e3%81%b8/%e4%bc%91%e8%ac%9b/')
       .replyWithFile(200, path.join(__dirname, './fixtures/sources/education.html'));
     nock('http://www.law.kyushu-u.ac.jp')
       .get('/faculty/cancel.php')
@@ -49,8 +49,8 @@ describe('Scrapers', () => {
 
 describe('Scrapers: no network connection', () => {
   before(() => {
-    nock('http://www.education.kyushu-u.ac.jp')
-      .get('/topics/student_index')
+    nock('https://www.education.kyushu-u.ac.jp')
+      .get('/category/%e3%81%bf%e3%81%aa%e3%81%95%e3%82%93%e3%81%b8/%e4%bc%91%e8%ac%9b/')
       .replyWithError('network error');
     nock('http://www.law.kyushu-u.ac.jp')
       .get('/kyukou/keiji.cgi')
