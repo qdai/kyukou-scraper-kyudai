@@ -18,7 +18,7 @@
     "chai": "^4.3.0",
     "chai-as-promised": "^7.0.0",
     "chai-shallow-deep-equal": "^1.4.6",
-    "eslint": "~7.17.0",
+    "eslint": "~7.21.0",
     "eslint-plugin-jsdoc": "^30.7.13",
     "eslint-plugin-node": "^11.1.0",
     "mocha": "^8.2.0",
