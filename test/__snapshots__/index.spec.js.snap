@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`scrapers /education expected to build events about education 1`] = `
+Array [
+  [ScrapError: "【補講】7月10日(木)4限" is not a valid date on 【補講】7月10日(木)4限],
+  Object {
+    "about": "補講",
+    "department": "教育学部",
+    "eventDate": 2019-06-12T15:00:00.000Z,
+    "link": "https://www.education.kyushu-u.ac.jp/topics/student_view/3",
+    "period": "2、3",
+    "pubDate": 2019-05-24T15:00:00.000Z,
+    "raw": "【補講】6月13日(木)2、3限 「subject3」(teacher3教員) 教室:room3",
+    "room": "room3",
+    "subject": "subject3",
+    "teacher": "teacher3",
+  },
+  Object {
+    "about": "休講",
+    "campus": "campus2地区",
+    "department": "教育学部",
+    "eventDate": 2019-06-06T15:00:00.000Z,
+    "link": "https://www.education.kyushu-u.ac.jp/topics/student_view/2",
+    "period": "1",
+    "pubDate": 2019-05-14T15:00:00.000Z,
+    "raw": "【休講】6月7日(金)1限 campus2地区開講「subject2」(teacher2教員)",
+    "subject": "subject2",
+    "teacher": "teacher2",
+  },
+]
+`;
+
+exports[`scrapers /law expected to build events about law 1`] = `
+Array [
+  [ScrapError: Cannot read properties of null (reading 'groups') on 10月16日no period subject4 teacher34 10月16日 公務 note4],
+  Object {
+    "about": "休講",
+    "department": "法学部",
+    "eventDate": 2019-10-15T15:00:00.000Z,
+    "link": "http://www.law.kyushu-u.ac.jp/faculty/cancel.php",
+    "note": "note3",
+    "period": "5",
+    "pubDate": 2019-10-09T15:00:00.000Z,
+    "raw": "
+        10月16日5限目
+        subject3
+        teacher3
+        10月10日
+        休講
+        note3
+        
+      ",
+    "subject": "subject3",
+    "teacher": "teacher3",
+  },
+  Object {
+    "about": "補講",
+    "department": "法学部",
+    "eventDate": 2019-10-01T15:00:00.000Z,
+    "link": "http://www.law.kyushu-u.ac.jp/faculty/cancel.php",
+    "note": "note2",
+    "period": "1",
+    "pubDate": 2019-09-30T15:00:00.000Z,
+    "raw": "
+        10月2日1限目
+        subject2(補講)
+        teacher2
+        10月1日
+        その他
+        note2
+        
+      ",
+    "subject": "subject2",
+    "teacher": "teacher2",
+  },
+  Object {
+    "about": "公務",
+    "department": "法学部",
+    "eventDate": 2019-09-30T15:00:00.000Z,
+    "link": "http://www.law.kyushu-u.ac.jp/faculty/cancel.php",
+    "note": "note1",
+    "period": "3",
+    "pubDate": 2019-09-09T15:00:00.000Z,
+    "raw": "
+        10月1日3限目
+        subject1
+        teacher1
+        09月10日
+        公務
+        note1
+        
+      ",
+    "subject": "subject1",
+    "teacher": "teacher1",
+  },
+]
+`;
+
+exports[`scrapers /literature expected to build events about literature 1`] = `
+Array [
+  [ScrapError: "yyyy年mm月dd日(木)" is not a valid date on yyyy年mm月dd日（木） 休講 後期・通常 木曜2限 subject1 teacher1 note1 2015年9月8日(1時24分)],
+  [ScrapError: Cannot read properties of null (reading 'groups') on 2015年10月1日（木） 休講 後期・通常 木曜invalid period subject1 teacher1 note1 2015年9月8日(1時24分)],
+  Object {
+    "about": "休講",
+    "department": "文学部",
+    "eventDate": 2015-09-30T15:00:00.000Z,
+    "link": "https://www2.lit.kyushu-u.ac.jp/~syllabus/cgi-bin/class-schedule-1.cgi",
+    "note": "note1",
+    "period": "2",
+    "pubDate": 2015-09-07T16:24:00.000Z,
+    "raw": "
+          2015年10月1日（木）
+          休講
+          後期・通常
+              木曜2限
+              subject1
+          teacher1
+          note1
+          2015年9月8日(1時24分)
+        ",
+    "subject": "subject1",
+    "teacher": "teacher1",
+  },
+]
+`;
+
+exports[`scrapers /science expected to build events about science 1`] = `
+Array [
+  Object {
+    "about": "休講",
+    "department": "理学部化学",
+    "eventDate": 2017-10-06T15:00:00.000Z,
+    "link": "https://www.sci.kyushu-u.ac.jp/student/cancel/",
+    "period": "2",
+    "raw": "休講
+    
+    
+      2017年10月7日(土) 2時限
+      subject1
+      (化学 2学年)
+      担当:teacher1",
+    "subject": "subject1",
+    "teacher": "teacher1",
+  },
+  Object {
+    "about": "補講",
+    "department": "理学部化学",
+    "eventDate": 2017-10-04T15:00:00.000Z,
+    "link": "https://www.sci.kyushu-u.ac.jp/student/cancel/",
+    "note": "note1
+multiple line
+multiple line",
+    "period": "3",
+    "raw": "補講
+    
+    
+      2017年10月5日(木) 3時限
+      subject1 with space
+      (化学 2学年)
+      担当:teacher1 teacher2
+      教室:room1 with space
+      連絡事項:note1
+multiple line
+multiple line",
+    "room": "room1 with space",
+    "subject": "subject1 with space",
+    "teacher": "teacher1 teacher2",
+  },
+  Object {
+    "about": "連絡",
+    "department": "理学部数学",
+    "eventDate": 2017-10-05T15:00:00.000Z,
+    "link": "https://www.sci.kyushu-u.ac.jp/student/cancel/",
+    "note": "note2",
+    "period": "4",
+    "raw": "連絡
+    
+    
+      2017年10月6日(金) 4時限
+      subject2
+      (数学 2学年)
+      担当:teacher2
+      教室:room2
+      連絡事項:note2",
+    "room": "room2",
+    "subject": "subject2",
+    "teacher": "teacher2",
+  },
+  [ScrapError: Cannot read properties of null (reading 'groups') on 休講 invalid date 4時限 subject3 (数学 4学年) 担当:teacher3 連絡事項:note3],
+]
+`;
