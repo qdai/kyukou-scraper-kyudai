@@ -5,10 +5,10 @@
   ],
   "overrides": [
     {
-      "files": "test/**/*.js",
-      "env": {
-        "mocha": true
-      }
+      "extends": [
+        "@egy186/eslint-config/jest"
+      ],
+      "files": "**/*.spec.js"
     }
   ]
 }
