@@ -10,7 +10,7 @@
     "cheerio": "^1.0.0-rc.10",
     "encoding": "^0.1.13",
     "moment": "~2.29.2",
-    "node-fetch": "^2.6.7"
+    "node-fetch": "^3.2.4"
   },
   "devDependencies": {
     "@egy186/eslint-config": "~0.74.0",
