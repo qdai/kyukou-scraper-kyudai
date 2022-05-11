@@ -3,12 +3,11 @@
 const nock = require('nock');
 const path = require('path');
 const scrapers = require('../lib');
-const sinon = require('sinon');
 
 describe('scrapers', () => {
-  let clock = null;
   beforeAll(() => {
-    clock = sinon.useFakeTimers(new Date(2019, 3, 1, 12));
+    jest.useFakeTimers({ advanceTimers: true });
+    jest.setSystemTime(new Date(2019, 3, 1, 12));
     nock('https://www.education.kyushu-u.ac.jp')
       .get('/category/%e3%81%bf%e3%81%aa%e3%81%95%e3%82%93%e3%81%b8/%e4%bc%91%e8%ac%9b/')
       .replyWithFile(200, path.join(__dirname, './__fixtures__/education.html'))
@@ -32,7 +31,7 @@ describe('scrapers', () => {
   });
 
   afterAll(() => {
-    clock.restore();
+    jest.useRealTimers();
     nock.cleanAll();
   });
 
