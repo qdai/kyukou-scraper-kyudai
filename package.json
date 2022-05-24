@@ -17,7 +17,7 @@
     "@types/jest": "^27.5.0",
     "eslint": "^8.16.0",
     "eslint-plugin-jest": "^26.2.2",
-    "eslint-plugin-jsdoc": "^39.3.0",
+    "eslint-plugin-jsdoc": "^39.3.2",
     "eslint-plugin-node": "^11.1.0",
     "jest": "^28.1.0",
     "nock": "^13.2.4",
