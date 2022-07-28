@@ -86,7 +86,9 @@ describe('utils', () => {
       expect(() => parseDate('2016年6月9日', 'YYYY年M月D日', '火')).toThrow(Error);
       expect(() => parseDate('2016年6月9日', 'YYYY年M月D日', '水')).toThrow(Error);
       expect(() => parseDate('2016年6月9日', 'YYYY年M月D日', '金')).toThrow(Error);
+      // eslint-disable-next-line jest/max-expects
       expect(() => parseDate('2016年6月9日', 'YYYY年M月D日', '土')).toThrow(Error);
+      // eslint-disable-next-line jest/max-expects
       expect(() => parseDate('2016年6月9日', 'YYYY年M月D日', '日')).toThrow(Error);
     });
   });
