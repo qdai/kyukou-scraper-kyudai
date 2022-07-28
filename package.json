@@ -9,14 +9,14 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.11",
     "encoding": "^0.1.13",
-    "moment": "~2.29.2",
+    "moment": "~2.29.4",
     "node-fetch": "^2.6.7"
   },
   "devDependencies": {
     "@egy186/eslint-config": "~0.75.1",
     "@types/jest": "^28.1.0",
     "eslint": "^8.17.0",
-    "eslint-plugin-jest": "^26.2.2",
+    "eslint-plugin-jest": "^26.6.0",
     "eslint-plugin-jsdoc": "^39.3.0",
     "eslint-plugin-node": "^11.1.0",
     "jest": "^28.1.0",
