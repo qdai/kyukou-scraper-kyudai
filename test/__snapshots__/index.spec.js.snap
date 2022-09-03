@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`scrapers /education expected to build events about education 1`] = `
-Array [
+[
   [ScrapError: "【補講】7月10日(木)4限" is not a valid date on 【補講】7月10日(木)4限],
-  Object {
+  {
     "about": "補講",
     "department": "教育学部",
     "eventDate": 2019-06-12T15:00:00.000Z,
@@ -15,7 +15,7 @@ Array [
     "subject": "subject3",
     "teacher": "teacher3",
   },
-  Object {
+  {
     "about": "休講",
     "campus": "campus2地区",
     "department": "教育学部",
@@ -31,9 +31,9 @@ Array [
 `;
 
 exports[`scrapers /law expected to build events about law 1`] = `
-Array [
+[
   [ScrapError: Cannot read properties of null (reading 'groups') on 10月16日no period subject4 teacher34 10月16日 公務 note4],
-  Object {
+  {
     "about": "休講",
     "department": "法学部",
     "eventDate": 2019-10-15T15:00:00.000Z,
@@ -53,7 +53,7 @@ Array [
     "subject": "subject3",
     "teacher": "teacher3",
   },
-  Object {
+  {
     "about": "補講",
     "department": "法学部",
     "eventDate": 2019-10-01T15:00:00.000Z,
@@ -73,7 +73,7 @@ Array [
     "subject": "subject2",
     "teacher": "teacher2",
   },
-  Object {
+  {
     "about": "公務",
     "department": "法学部",
     "eventDate": 2019-09-30T15:00:00.000Z,
@@ -97,10 +97,10 @@ Array [
 `;
 
 exports[`scrapers /literature expected to build events about literature 1`] = `
-Array [
+[
   [ScrapError: "yyyy年mm月dd日(木)" is not a valid date on yyyy年mm月dd日（木） 休講 後期・通常 木曜2限 subject1 teacher1 note1 2015年9月8日(1時24分)],
   [ScrapError: Cannot read properties of null (reading 'groups') on 2015年10月1日（木） 休講 後期・通常 木曜invalid period subject1 teacher1 note1 2015年9月8日(1時24分)],
-  Object {
+  {
     "about": "休講",
     "department": "文学部",
     "eventDate": 2015-09-30T15:00:00.000Z,
@@ -125,8 +125,8 @@ Array [
 `;
 
 exports[`scrapers /science expected to build events about science 1`] = `
-Array [
-  Object {
+[
+  {
     "about": "休講",
     "department": "理学部化学",
     "eventDate": 2017-10-06T15:00:00.000Z,
@@ -142,7 +142,7 @@ Array [
     "subject": "subject1",
     "teacher": "teacher1",
   },
-  Object {
+  {
     "about": "補講",
     "department": "理学部化学",
     "eventDate": 2017-10-04T15:00:00.000Z,
@@ -166,7 +166,7 @@ multiple line",
     "subject": "subject1 with space",
     "teacher": "teacher1 teacher2",
   },
-  Object {
+  {
     "about": "連絡",
     "department": "理学部数学",
     "eventDate": 2017-10-05T15:00:00.000Z,
