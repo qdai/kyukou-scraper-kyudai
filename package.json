@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@egy186/eslint-config": "^0.85.0",
-    "@types/jest": "^29.5.5",
+    "@types/jest": "^29.5.7",
     "eslint": "^8.52.0",
     "eslint-plugin-jest": "^27.6.0",
     "eslint-plugin-jsdoc": "^39.9.1",
